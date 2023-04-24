@@ -14,6 +14,7 @@
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/queries.css" rel="stylesheet" />
     <link href="img/favicon.png" rel="icon" />
+    <script src="js/script.js" type="text/javascript" defer></script>
   </head>
 
   <body>
@@ -36,8 +37,18 @@
         </ul>
       </nav>
       <button class="btn-mobile-nav">
-        <div class="icon-mobile-nav" name="menu-outline">open</div>
-        <div class="icon-mobile-nav" name="close-outline">close</div>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 16 16"
+        class="icon-mobile-nav" name="menu-outline"">
+    <path d=" M 1 2 L 1 3 L 14 3 L 14 2 Z M 1 7 L 1 8 L 14 8 L 14 7 Z M 1 12 L 1 13 L 14 13 L 14 12 Z">
+        </path>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 16 16"
+        class="icon-mobile-nav" name="close-outline">
+        <path
+            d="M 2.75 2.042969 L 2.042969 2.75 L 2.398438 3.101563 L 7.292969 8 L 2.042969 13.25 L 2.75 13.957031 L 8 8.707031 L 12.894531 13.605469 L 13.25 13.957031 L 13.957031 13.25 L 13.605469 12.894531 L 8.707031 8 L 13.957031 2.75 L 13.25 2.042969 L 8 7.292969 L 3.101563 2.398438 Z">
+        </path>
+    </svg>
       </button>
     </header>
     <main>
@@ -266,14 +277,92 @@
               </figure>
           </div>
 
-         
-          <section id="украса">
-            <div class="container">Украса</div>
-          </section>
-          <section id="контакти">Контакти</section>
-        </main><section id="products">
-          
+          <section id="testimonials">
+            <div class="container">
+                <span class="subheading">Младоженците</span>
+                <h2>Какво казват нашите клиенти</h2>
 
+                <div class="testimonials">
+                    <figure class="testimonial">
+                        <img class="testimonial-img" alt="Photo of customer Dave Bryson"
+                            src="wedding/bride-g62dd0cb7c_1920.jpg" />
+                        <blockquote class="testimonial-text">
+                            Нашият сватбен ден беше вълшебен!
+                        </blockquote>
+                        <p class="testimonial-name">&mdash; Зорница и Даниел Кръстеви</p>
+                    </figure>
+
+                    <figure class="testimonial">
+                        <img class="testimonial-img" alt="Photo of customer Ben Hadley"
+                            src="wedding/bride-g65f438fcb_1920.jpg" />
+                        <blockquote class="testimonial-text">
+                            Нашата сватба беше приказна!
+                        </blockquote>
+                        <p class="testimonial-name">&mdash; Росица и Бен Димитрови</p>
+                    </figure>
+
+                    <figure class="testimonial">
+                        <img class="testimonial-img" alt="Photo of customer Steve Miller"
+                            src="wedding/winter-g111c12f80_1920.jpg" />
+                        <blockquote class="testimonial-text">
+                            Сватбеният ни ден беше незабравим!
+                        </blockquote>
+                        <p class="testimonial-name">&mdash; Стоян и Анелия Иванови</p>
+                    </figure>
+                    <figure class="testimonial">
+                        <img class="testimonial-img" alt="Photo of customer Steve Miller"
+                            src="wedding/newlyweds-gebc94bebd_1920.jpg" />
+                        <blockquote class="testimonial-text">
+                            Това беше сватбата на нашите мечти! Всичко беше толкова вълнуващо и прекрасно до най-малкия детайл, че никога няма да го забравим!
+                        </blockquote>
+                        <p class="testimonial-name">&mdash; Петя и Иван Петрови</p>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <div class="container cta">
+          <div class="cta-text">
+              <span class="subheading">Products</span>
+              <h2>List of all of our products</h2>
+              
+         
+          <form class="cta-form" method="get" enctype="text/plain">
+            <div>
+                <label for="full-name">Full Name</label>
+                <input id="full-name" type="text" placeholder="Maria Ivanova" name="full-name"
+                    required />
+            </div>
+
+            <div>
+                <label for="email">Email address</label>
+                <input id="email" type="email" placeholder="me@example.com" name="email" />
+            </div>
+
+            <div>
+                <label for="select-where">Where did you hear from us?</label>
+                <select id="select-where" name="select-where">
+                    <option value="">Please choose one option:</option>
+                    <option value="friends">Friends and family</option>
+                    <option value="youtube">YouTube video</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="ad">Facebook ad</option>
+                    <option value="others">Others</option>
+                    <option value="facebook">Facebook</option>
+                </select>
+            </div>
+            <script>
+                function sendMail() {
+                    var fullname = document.getElementById("full-name").value;
+                    var email = document.getElementById("email").value;
+                    document.location.href = "mailto:" + email + "?subject=myemailsubject" + "&body=" + fullname;
+                }
+            </script>
+            <button class="btn btn--form" onclick="sendMail()">Send</button>
+            <section id="украса">
+              <div class="container">Украса</div>
+            </section>
+            <section id="контакти">Контакти</section>
+          </main><section id="products">
       <footer class="container grid grid-4-colls">
         <div class="logo-col">
             <img src="pictures/R.png" width="10%"/>
@@ -303,6 +392,8 @@
                     </svg></a>
                 </li>
             </ul>
+            
+
             <p class="copyright">Copyright &copy; 2023 by Wedding agency Lilly, Inc. All rights reserved.</p>
         </div>
         <div class="address-col">
