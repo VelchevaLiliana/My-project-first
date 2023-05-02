@@ -241,19 +241,18 @@ h1 {
   grid-template-columns: 1fr 1fr;
 }
 
-.grid-6-colls{
+.grid-6-colls {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .grid-3-colls {
-  display : grid ;
-  grid-template-columns : repeat(3, 1fr) ;
-  grid-template-rows : repeat(2, 1fr) ;
-  }
-  .wrapper {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
-  }
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
 
 /************HOW TO SECTION ****************/
 .step-number {
@@ -429,10 +428,9 @@ h1 {
 }
 
 .cta-img-box {
-  background-image: linear-gradient(to right bottom, #dfb3ce, transparent),
-    url('../img/step2.jpeg');
+  background-image: linear-gradient(to right bottom, #a75487, transparent),
+    url('../cta-img-box.jpg');
   background-size: cover;
-  background-position: center;
 }
 
 .cta {
