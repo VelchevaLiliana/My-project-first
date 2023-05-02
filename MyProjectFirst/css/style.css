@@ -33,7 +33,7 @@ gray: black;
 */
 
 * {
-  background-color: #facce5;
+  /* background-color: #facce5;*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -231,13 +231,29 @@ h1 {
   row-gap: 9.6rem;
 }
 
-.grid-3-colls {
+/*.grid-3-colls {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-}
+  grid-template-rows: 100% 100% 100%;
+}*/
 
 .grid-2-colls {
   grid-template-columns: 1fr 1fr;
 }
+
+.grid-6-colls{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.grid-3-colls {
+  display : grid ;
+  grid-template-columns : repeat(3, 1fr) ;
+  grid-template-rows : repeat(2, 1fr) ;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+  }
+
 
 /************HOW TO SECTION ****************/
 .step-number {
@@ -291,7 +307,7 @@ h1 {
   padding-bottom: 60%;
 
   background-color: rgb(236, 231, 235);
-  z-index: -1;
+  z-index: -2;
 }
 
 .step-img-box {
@@ -447,10 +463,10 @@ h1 {
 }
 
 **************************/
-  /* TESTIMONIALS SECTION */
-  /**************************/
-  
-  .section-testimonials {
+/* TESTIMONIALS SECTION */
+/**************************/
+
+.section-testimonials {
   background-color: white;
   /* display: grid;
     grid-template-columns: 55fr 45fr;*/
